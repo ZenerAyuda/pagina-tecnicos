@@ -17,8 +17,8 @@
     }
 
     header h1 {
-      font-size: 2.5em;
-      margin-bottom: 10px;
+      font-size: 2.8em;
+      margin-top: 15px;
     }
 
     section {
@@ -35,27 +35,33 @@
     .btn-container {
       display: flex;
       justify-content: center;
-      gap: 15px;
+      gap: 20px;
       flex-wrap: wrap;
     }
 
     .btn {
       background-color: white;
       color: black;
-      padding: 12px 25px;
+      padding: 16px 35px;
       border: none;
-      border-radius: 8px;
-      font-size: 1em;
+      border-radius: 12px;
+      font-size: 1.2em;
       text-decoration: none;
-      transition: background-color 0.3s;
+      transition: background-color 0.3s, transform 0.2s;
     }
 
     .btn:hover {
       background-color: #ccc;
+      transform: scale(1.05);
     }
 
-    img {
-      max-width: 300px;
+    img.logo {
+      height: 100px;
+      margin-bottom: 10px;
+    }
+
+    img.diagram {
+      max-width: 90%;
       margin-top: 20px;
     }
 
@@ -68,7 +74,7 @@
 <body>
 
   <header>
-    <img src="https://raw.githubusercontent.com/ZenerAyuda/pagina-tecnicos/refs/heads/main/unnamed%20(1).png" alt="Zener Logo" height="40">
+    <img src="https://raw.githubusercontent.com/ZenerAyuda/pagina-tecnicos/refs/heads/main/unnamed%20(1).png" alt="Zener Logo" class="logo">
     <h1>Accesos Técnicos<br>Zener Austral</h1>
   </header>
 
@@ -92,9 +98,9 @@
 
   <section>
     <h2>ANSI/TIA/EIA-568-B</h2>
-    <img src="Ethernet-EIA-TIA-568B-wiring-standards.png" alt="Ethernet EIA/TIA 568B Wiring Standards">
+    <img src="Ethernet-EIA-TIA-568B-wiring-standards.png" alt="Ethernet EIA/TIA 568B Wiring Standards" class="diagram">
     <h2>ANSI/TIA/EIA-598</h2>
-    <img src="https://github.com/ZenerAyuda/pagina-tecnicos/blob/main/CODIGO%20DE%20COLORES.jpeg?raw=true" alt="Código de Colores ANSI/TIA/EIA-598">
+    <img src="https://github.com/ZenerAyuda/pagina-tecnicos/blob/main/CODIGO%20DE%20COLORES.jpeg?raw=true" alt="Código de Colores ANSI/TIA/EIA-598" class="diagram">
   </section>
 
   <footer>
