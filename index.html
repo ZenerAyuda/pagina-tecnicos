@@ -153,6 +153,24 @@
   </div>
 </section>
 
+  <script>
+    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    const gpsLink = document.getElementById('gps-link');
+    const gpsText = document.getElementById('gps-link-text');
+
+    if (/android/i.test(userAgent)) {
+      gpsLink.href = "https://play.google.com/store/apps/details?id=com.gpsmapcamera.geotagginglocationonphoto&pcampaignid=web_share";
+      gpsLink.innerText = "Descargar desde Google Play";
+    } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+      gpsLink.href = "https://apps.apple.com/hn/app/gps-map-camera-geotag-photos/id1503116917";
+      gpsLink.innerText = "Descargar desde App Store";
+    } else {
+      gpsLink.href = "https://play.google.com/store/apps/details?id=com.gpsmapcamera.geotagginglocationonphoto";
+      gpsText.innerText = "No se pudo detectar tu dispositivo, pero puedes probar con la versión Android:";
+      gpsLink.innerText = "Descargar desde Google Play";
+    }
+  </script>
+
   <footer>
     &copy; 2025 Zener Austral - Página Técnica
   </footer>
