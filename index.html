@@ -83,6 +83,42 @@
       .nav-menu .btn { margin: 0 10px; width: auto; font-size: 1.2em; padding: 16px 35px; }
       .blur-bg { filter: none; }
     }
+    @media (max-width: 600px) {
+      header {
+        padding: 20px 5px;
+      }
+      header h1 {
+        font-size: 1.4em;
+        margin-top: 10px;
+      }
+      .btn {
+        font-size: 1em;
+        padding: 10px 10px;
+      }
+      .btn-container {
+        gap: 10px;
+      }
+      section {
+        padding: 15px 5px;
+        margin: 10px 0;
+        border-radius: 7px;
+      }
+      .nav-menu .btn {
+        font-size: 0.95em;
+        padding: 8px 0;
+      }
+      img.logo {
+        height: 60px;
+      }
+      img.diagram {
+        max-width: 100%;
+        margin-top: 10px;
+      }
+      footer {
+        padding: 10px;
+        font-size: 0.8em;
+      }
+    }
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -254,6 +290,17 @@
   const hamburger = document.getElementById('hamburger-menu');
   const navMenu = document.getElementById('nav-menu');
   const mainBlur = document.getElementById('main-blur-container');
+
+  // Detección de móvil o escritorio
+  function isMobile() {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  }
+  if (isMobile()) {
+    document.body.classList.add('mobile-view');
+  } else {
+    document.body.classList.add('desktop-view');
+  }
+
   function toggleMenu() {
     navMenu.classList.toggle('show');
     if (navMenu.classList.contains('show')) {
