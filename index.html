@@ -5,10 +5,9 @@
   <title>Accesos Técnicos Zener Austral</title>
   <link rel="icon" href="https://raw.githubusercontent.com/ZenerAyuda/pagina-tecnicos/refs/heads/main/favicon.ico" type="image/x-icon">
   <style>
-    /* Eliminar estilos del menú hamburguesa y nav-menu */
+    /* Eliminar estilos del menú hamburguesa, nav-menu y anclas */
     /* ...mantener estilos generales y de responsividad... */
     @media (min-width: 900px) {
-      .nav-menu .btn { margin: 0 10px; width: auto; font-size: 1.2em; padding: 16px 35px; }
       .blur-bg { filter: none; }
     }
     @media (max-width: 600px) {
@@ -30,10 +29,6 @@
         padding: 15px 5px;
         margin: 10px 0;
         border-radius: 7px;
-      }
-      .nav-menu .btn {
-        font-size: 0.95em;
-        padding: 8px 0;
       }
       img.logo {
         height: 60px;
@@ -120,14 +115,6 @@
     <header>
       <img src="https://raw.githubusercontent.com/ZenerAyuda/pagina-tecnicos/refs/heads/main/unnamed%20(1).png" alt="Zener Logo" class="logo">
       <h1>Accesos Técnicos<br>Zener Austral</h1>
-      <nav class="nav-menu" id="nav-menu" style="display: flex; flex-direction: row; justify-content: center; margin-top: 20px; background: none; box-shadow: none; border-radius: 0; opacity: 1; pointer-events: auto; transform: none; backdrop-filter: none;">
-        <a href="#materiales" class="btn">🧰 Materiales</a>
-        <a href="#potencia" class="btn">📸 Potencia Óptica</a>
-        <a href="#ticket" class="btn">💬 Ticket NNOC</a>
-        <a href="#cableado" class="btn">Estándares de Cableado</a>
-        <a href="#manuales" class="btn">📘 Manuales</a>
-        <a href="#herramientas" class="btn">🛠️ Herramientas</a>
-      </nav>
     </header>
 
     <section id="materiales">
@@ -209,7 +196,6 @@
   </div>
 
 <script>
-  // Eliminar todo lo relacionado al menú hamburguesa
   // ...mantener solo el código de GPS y responsividad...
   const userAgent = navigator.userAgent || navigator.vendor || window.opera;
   const gpsLink = document.getElementById('gps-link');
